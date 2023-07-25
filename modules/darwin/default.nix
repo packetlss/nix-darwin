@@ -10,6 +10,11 @@
     pathsToLink = [ "/Applications" ];
   };
 
+
+  networking.computerName = "Plutten MacBook";
+  networking.hostName = "plutten";
+
+
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
@@ -26,16 +31,31 @@
 
   services.nix-daemon.enable = true;
 
-  system.defaults.finder.AppleShowAllExtensions = true;
-  system.defaults.finder._FXShowPosixPathInTitle = true;
-  system.defaults.finder.ShowPathbar = true;
-  system.defaults.finder.ShowStatusBar = true;
+  security.pam.enableSudoTouchIdAuth = true;
+
+
+  system.defaults.finder = {
+    AppleShowAllExtensions = true;
+    _FXShowPosixPathInTitle = true;
+    ShowPathbar = false;
+    ShowStatusBar = true;
+    FXPreferredViewStyle = "Nlsv";
+  };
 
   system.defaults.dock.autohide = true;
 
+  system.defaults.loginwindow.GuestEnabled = false;
+
+  system.defaults.NSGlobalDomain.AppleInterfaceStyle = "Dark";
   system.defaults.NSGlobalDomain.AppleShowAllExtensions = true;
   system.defaults.NSGlobalDomain.InitialKeyRepeat = 15;
   system.defaults.NSGlobalDomain.KeyRepeat = 2;
+
+  system.defaults.NSGlobalDomain.NSAutomaticCapitalizationEnabled = false;
+  system.defaults.NSGlobalDomain.NSAutomaticDashSubstitutionEnabled = false;
+  system.defaults.NSGlobalDomain.NSAutomaticPeriodSubstitutionEnabled = false;
+  system.defaults.NSGlobalDomain.NSAutomaticQuoteSubstitutionEnabled = false;
+  system.defaults.NSGlobalDomain.NSAutomaticSpellingCorrectionEnabled = false;
 
   homebrew = {
     enable = true;
@@ -49,6 +69,8 @@
     brews = [ "mas" ];
     whalebrews = [ ];
   };
+
+  #time.timeZone = "Europe/Stockholm";
 
   system.stateVersion = 4;
 }
