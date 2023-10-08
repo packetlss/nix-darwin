@@ -11,6 +11,13 @@
     pkgs.curl
     pkgs.less
     pkgs.vim
+    pkgs.spotify
+    pkgs.neovim
+    pkgs.ripgrep
+    pkgs.fd
+    pkgs.lazygit
+    pkgs.nodejs
+    pkgs.hackrf
   ];
 
   home.sessionVariables = {
@@ -44,12 +51,14 @@
   programs.zsh.syntaxHighlighting.enable = true;
   programs.zsh.shellAliases = { 
     ls = "ls --color=auto -F";
+    #vi = "nvim";
+    #vim = "nvim";
   };
   programs.starship.enable = true;
   programs.starship.enableZshIntegration = true;
 
   programs.wezterm = {
-    enable = true;
+    enable = false;
     enableZshIntegration = true;
     extraConfig = ''
       -- Your lua code / config here
