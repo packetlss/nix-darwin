@@ -66,7 +66,7 @@
     };
     casks = [ "obsidian" "gqrx" "tabby" ];
     taps = [ ];
-    brews = [ "mas" ];
+    brews = [ "go" "mas" ];
     whalebrews = [ ];
   };
 
