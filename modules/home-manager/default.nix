@@ -54,6 +54,10 @@
     #vi = "nvim";
     #vim = "nvim";
   };
+  programs.zsh.initExtra = "if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+  fi";
+
   programs.starship.enable = true;
   programs.starship.enableZshIntegration = true;
 
