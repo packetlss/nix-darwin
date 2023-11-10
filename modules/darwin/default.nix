@@ -64,9 +64,9 @@
     masApps = { 
       "Strongbox - Password Manager" = 897283731;
     };
-    casks = [ "obsidian" "gqrx" "tabby" ];
+    casks = [ "obsidian" "gqrx" "tabby" "visual-studio-code" ];
     taps = [ ];
-    brews = [ "go" "mas" ];
+    brews = [ "go" "mas" "ollama" ];
     whalebrews = [ ];
   };
 
