@@ -24,6 +24,7 @@
     PAGER = "less";
     CLICLOLOR = 1;
     EDITOR = "vim";
+    PATH = "$HOME/.cargo/bin:$PATH";
   };
 
   #programs.home-manager.enable = true;
