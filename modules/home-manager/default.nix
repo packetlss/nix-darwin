@@ -18,6 +18,7 @@
     pkgs.lazygit
     pkgs.nodejs
     pkgs.hackrf
+    pkgs.cargo
   ];
 
   home.sessionVariables = {
